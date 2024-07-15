@@ -1,0 +1,758 @@
+2024-06-14 00:01:45,161 INFO (HikariDataSource.java:349)- HikariPool-1 - Shutdown initiated...
+2024-06-14 00:01:45,174 INFO (HikariDataSource.java:351)- HikariPool-1 - Shutdown completed.
+2024-06-14 12:05:20,507 INFO (Version.java:21)- HV000001: Hibernate Validator 8.0.1.Final
+2024-06-14 12:05:20,544 INFO (StartupInfoLogger.java:50)- Starting DiscordChatApplication using Java 21.0.1 with PID 7620 (C:\Users\lwq\IdeaProjects\discord-chat-backend\target\classes started by lwq in C:\Users\lwq\IdeaProjects\discord-chat-backend)
+2024-06-14 12:05:20,545 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-14 12:05:20,546 INFO (SpringApplication.java:660)- The following 1 profile is active: "dev"
+2024-06-14 12:05:20,599 INFO (DeferredLog.java:252)- Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-06-14 12:05:20,599 INFO (DeferredLog.java:252)- For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-06-14 12:05:22,098 INFO (RepositoryConfigurationDelegate.java:295)- Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-14 12:05:22,102 INFO (RepositoryConfigurationDelegate.java:143)- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-06-14 12:05:22,149 INFO (RepositoryConfigurationDelegate.java:211)- Finished Spring Data repository scanning in 23 ms. Found 0 Redis repository interfaces.
+2024-06-14 12:05:23,512 INFO (TomcatWebServer.java:111)- Tomcat initialized with port 8888 (http)
+2024-06-14 12:05:23,529 INFO (DirectJDKLog.java:173)- Initializing ProtocolHandler ["http-nio-8888"]
+2024-06-14 12:05:23,531 INFO (DirectJDKLog.java:173)- Starting service [Tomcat]
+2024-06-14 12:05:23,532 INFO (DirectJDKLog.java:173)- Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-14 12:05:23,600 INFO (DirectJDKLog.java:173)- Initializing Spring embedded WebApplicationContext
+2024-06-14 12:05:23,601 INFO (ServletWebServerApplicationContext.java:296)- Root WebApplicationContext: initialization completed in 3001 ms
+2024-06-14 12:05:23,945 INFO (Version.java:41)- Redisson 3.19.1
+2024-06-14 12:05:24,230 WARN (AbstractApplicationContext.java:632)- Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'resourceController' defined in file [C:\Users\lwq\IdeaProjects\discord-chat-backend\target\classes\io\github\discordchat\controller\ResourceController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'resourceServiceImpl' defined in file [C:\Users\lwq\IdeaProjects\discord-chat-backend\target\classes\io\github\discordchat\service\impl\ResourceServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'verifyCodeManager' defined in file [C:\Users\lwq\IdeaProjects\discord-chat-backend\target\classes\io\github\discordchat\manager\redis\VerifyCodeManager.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'stringRedisTemplate' defined in class path resource [org/redisson/spring/starter/RedissonAutoConfiguration.class]: Unsatisfied dependency expressed through method 'stringRedisTemplate' parameter 0: Error creating bean with name 'redissonConnectionFactory' defined in class path resource [org/redisson/spring/starter/RedissonAutoConfiguration.class]: Unsatisfied dependency expressed through method 'redissonConnectionFactory' parameter 0: Error creating bean with name 'redisson' defined in class path resource [org/redisson/spring/starter/RedissonAutoConfiguration.class]: Failed to instantiate [org.redisson.api.RedissonClient]: Factory method 'redisson' threw exception with message: Unable to connect to Redis server: 127.0.0.1/127.0.0.1:6378
+2024-06-14 12:05:24,233 INFO (DirectJDKLog.java:173)- Stopping service [Tomcat]
+2024-06-14 12:05:24,256 INFO (ConditionEvaluationReportLogger.java:82)- 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-06-14 12:05:24,275 ERROR (SpringApplication.java:859)- Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'resourceController' defined in file [C:\Users\lwq\IdeaProjects\discord-chat-backend\target\classes\io\github\discordchat\controller\ResourceController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'resourceServiceImpl' defined in file [C:\Users\lwq\IdeaProjects\discord-chat-backend\target\classes\io\github\discordchat\service\impl\ResourceServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'verifyCodeManager' defined in file [C:\Users\lwq\IdeaProjects\discord-chat-backend\target\classes\io\github\discordchat\manager\redis\VerifyCodeManager.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'stringRedisTemplate' defined in class path resource [org/redisson/spring/starter/RedissonAutoConfiguration.class]: Unsatisfied dependency expressed through method 'stringRedisTemplate' parameter 0: Error creating bean with name 'redissonConnectionFactory' defined in class path resource [org/redisson/spring/starter/RedissonAutoConfiguration.class]: Unsatisfied dependency expressed through method 'redissonConnectionFactory' parameter 0: Error creating bean with name 'redisson' defined in class path resource [org/redisson/spring/starter/RedissonAutoConfiguration.class]: Failed to instantiate [org.redisson.api.RedissonClient]: Factory method 'redisson' threw exception with message: Unable to connect to Redis server: 127.0.0.1/127.0.0.1:6378
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:237)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1357)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1194)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:962)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at io.github.discordchat.DiscordChatApplication.main(DiscordChatApplication.java:14)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'resourceServiceImpl' defined in file [C:\Users\lwq\IdeaProjects\discord-chat-backend\target\classes\io\github\discordchat\service\impl\ResourceServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'verifyCodeManager' defined in file [C:\Users\lwq\IdeaProjects\discord-chat-backend\target\classes\io\github\discordchat\manager\redis\VerifyCodeManager.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'stringRedisTemplate' defined in class path resource [org/redisson/spring/starter/RedissonAutoConfiguration.class]: Unsatisfied dependency expressed through method 'stringRedisTemplate' parameter 0: Error creating bean with name 'redissonConnectionFactory' defined in class path resource [org/redisson/spring/starter/RedissonAutoConfiguration.class]: Unsatisfied dependency expressed through method 'redissonConnectionFactory' parameter 0: Error creating bean with name 'redisson' defined in class path resource [org/redisson/spring/starter/RedissonAutoConfiguration.class]: Failed to instantiate [org.redisson.api.RedissonClient]: Factory method 'redisson' threw exception with message: Unable to connect to Redis server: 127.0.0.1/127.0.0.1:6378
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:237)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1357)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1194)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782)
+	... 22 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'verifyCodeManager' defined in file [C:\Users\lwq\IdeaProjects\discord-chat-backend\target\classes\io\github\discordchat\manager\redis\VerifyCodeManager.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'stringRedisTemplate' defined in class path resource [org/redisson/spring/starter/RedissonAutoConfiguration.class]: Unsatisfied dependency expressed through method 'stringRedisTemplate' parameter 0: Error creating bean with name 'redissonConnectionFactory' defined in class path resource [org/redisson/spring/starter/RedissonAutoConfiguration.class]: Unsatisfied dependency expressed through method 'redissonConnectionFactory' parameter 0: Error creating bean with name 'redisson' defined in class path resource [org/redisson/spring/starter/RedissonAutoConfiguration.class]: Failed to instantiate [org.redisson.api.RedissonClient]: Factory method 'redisson' threw exception with message: Unable to connect to Redis server: 127.0.0.1/127.0.0.1:6378
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:237)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1357)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1194)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782)
+	... 36 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'stringRedisTemplate' defined in class path resource [org/redisson/spring/starter/RedissonAutoConfiguration.class]: Unsatisfied dependency expressed through method 'stringRedisTemplate' parameter 0: Error creating bean with name 'redissonConnectionFactory' defined in class path resource [org/redisson/spring/starter/RedissonAutoConfiguration.class]: Unsatisfied dependency expressed through method 'redissonConnectionFactory' parameter 0: Error creating bean with name 'redisson' defined in class path resource [org/redisson/spring/starter/RedissonAutoConfiguration.class]: Failed to instantiate [org.redisson.api.RedissonClient]: Factory method 'redisson' threw exception with message: Unable to connect to Redis server: 127.0.0.1/127.0.0.1:6378
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:542)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1337)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1167)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782)
+	... 50 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'redissonConnectionFactory' defined in class path resource [org/redisson/spring/starter/RedissonAutoConfiguration.class]: Unsatisfied dependency expressed through method 'redissonConnectionFactory' parameter 0: Error creating bean with name 'redisson' defined in class path resource [org/redisson/spring/starter/RedissonAutoConfiguration.class]: Failed to instantiate [org.redisson.api.RedissonClient]: Factory method 'redisson' threw exception with message: Unable to connect to Redis server: 127.0.0.1/127.0.0.1:6378
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:542)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1337)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1167)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782)
+	... 64 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redisson' defined in class path resource [org/redisson/spring/starter/RedissonAutoConfiguration.class]: Failed to instantiate [org.redisson.api.RedissonClient]: Factory method 'redisson' threw exception with message: Unable to connect to Redis server: 127.0.0.1/127.0.0.1:6378
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:648)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:485)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1337)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1167)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782)
+	... 78 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.redisson.api.RedissonClient]: Factory method 'redisson' threw exception with message: Unable to connect to Redis server: 127.0.0.1/127.0.0.1:6378
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:177)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:644)
+	... 92 common frames omitted
+Caused by: org.redisson.client.RedisConnectionException: Unable to connect to Redis server: 127.0.0.1/127.0.0.1:6378
+	at org.redisson.connection.pool.ConnectionPool.lambda$createConnection$0(ConnectionPool.java:154)
+	at java.base/java.util.concurrent.CompletableFuture.uniWhenComplete(CompletableFuture.java:863)
+	at java.base/java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:841)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2194)
+	at org.redisson.connection.pool.ConnectionPool.promiseFailure(ConnectionPool.java:318)
+	at org.redisson.connection.pool.ConnectionPool.lambda$createConnection$6(ConnectionPool.java:277)
+	at java.base/java.util.concurrent.CompletableFuture.uniWhenComplete(CompletableFuture.java:863)
+	at java.base/java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:841)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2194)
+	at org.redisson.client.RedisClient$1$2.run(RedisClient.java:250)
+	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:173)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:166)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:469)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:994)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.util.concurrent.CompletionException: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: 127.0.0.1/127.0.0.1:6378
+	at java.base/java.util.concurrent.CompletableFuture.encodeRelay(CompletableFuture.java:368)
+	at java.base/java.util.concurrent.CompletableFuture.completeRelay(CompletableFuture.java:377)
+	at java.base/java.util.concurrent.CompletableFuture$UniRelay.tryFire(CompletableFuture.java:1097)
+	... 11 common frames omitted
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: 127.0.0.1/127.0.0.1:6378
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:336)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:339)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:776)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:994)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-06-14 12:05:50,964 INFO (Version.java:21)- HV000001: Hibernate Validator 8.0.1.Final
+2024-06-14 12:05:50,997 INFO (StartupInfoLogger.java:50)- Starting DiscordChatApplication using Java 21.0.1 with PID 18248 (C:\Users\lwq\IdeaProjects\discord-chat-backend\target\classes started by lwq in C:\Users\lwq\IdeaProjects\discord-chat-backend)
+2024-06-14 12:05:50,997 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-14 12:05:50,999 INFO (SpringApplication.java:660)- The following 1 profile is active: "dev"
+2024-06-14 12:05:51,047 INFO (DeferredLog.java:252)- Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-06-14 12:05:51,047 INFO (DeferredLog.java:252)- For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-06-14 12:05:52,103 INFO (RepositoryConfigurationDelegate.java:295)- Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-14 12:05:52,106 INFO (RepositoryConfigurationDelegate.java:143)- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-06-14 12:05:52,135 INFO (RepositoryConfigurationDelegate.java:211)- Finished Spring Data repository scanning in 16 ms. Found 0 Redis repository interfaces.
+2024-06-14 12:05:53,004 INFO (TomcatWebServer.java:111)- Tomcat initialized with port 8888 (http)
+2024-06-14 12:05:53,012 INFO (DirectJDKLog.java:173)- Initializing ProtocolHandler ["http-nio-8888"]
+2024-06-14 12:05:53,014 INFO (DirectJDKLog.java:173)- Starting service [Tomcat]
+2024-06-14 12:05:53,014 INFO (DirectJDKLog.java:173)- Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-14 12:05:53,057 INFO (DirectJDKLog.java:173)- Initializing Spring embedded WebApplicationContext
+2024-06-14 12:05:53,058 INFO (ServletWebServerApplicationContext.java:296)- Root WebApplicationContext: initialization completed in 2010 ms
+2024-06-14 12:05:53,319 INFO (Version.java:41)- Redisson 3.19.1
+2024-06-14 12:05:53,559 INFO (ConnectionPool.java:162)- 1 connections initialized for 127.0.0.1/127.0.0.1:6378
+2024-06-14 12:05:53,612 INFO (ConnectionPool.java:162)- 24 connections initialized for 127.0.0.1/127.0.0.1:6378
+2024-06-14 12:05:55,143 INFO (OptionalLiveReloadServer.java:59)- LiveReload server is running on port 35729
+2024-06-14 12:05:55,158 INFO (EndpointLinksResolver.java:60)- Exposing 1 endpoint beneath base path '/actuator'
+2024-06-14 12:05:55,215 INFO (DirectJDKLog.java:173)- Starting ProtocolHandler ["http-nio-8888"]
+2024-06-14 12:05:55,222 INFO (TomcatWebServer.java:243)- Tomcat started on port 8888 (http) with context path '/'
+2024-06-14 12:05:55,233 INFO (StartupInfoLogger.java:56)- Started DiscordChatApplication in 4.811 seconds (process running for 5.524)
+2024-06-14 12:05:55,606 INFO (DirectJDKLog.java:173)- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-14 12:05:55,606 INFO (FrameworkServlet.java:532)- Initializing Servlet 'dispatcherServlet'
+2024-06-14 12:05:55,607 INFO (FrameworkServlet.java:554)- Completed initialization in 1 ms
+2024-06-14 12:05:55,608 INFO (HikariDataSource.java:109)- HikariPool-1 - Starting...
+2024-06-14 12:05:55,764 INFO (HikariPool.java:554)- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@53f9fa3
+2024-06-14 12:05:55,774 INFO (HikariDataSource.java:122)- HikariPool-1 - Start completed.
+2024-06-14 12:08:58,981 ERROR (CommonExceptionHandler.java:42)- Required request body is missing: public io.github.discordchat.core.common.resp.RestResp<io.github.discordchat.dto.resp.UserRegisterRespDto> io.github.discordchat.controller.front.UserController.register(io.github.discordchat.dto.req.UserRegisterReqDto)
+org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public io.github.discordchat.core.common.resp.RestResp<io.github.discordchat.dto.resp.UserRegisterRespDto> io.github.discordchat.controller.front.UserController.register(io.github.discordchat.dto.req.UserRegisterReqDto)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:164)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:135)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:224)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:178)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+2024-06-14 12:08:58,987 WARN (AbstractHandlerExceptionResolver.java:247)- Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public io.github.discordchat.core.common.resp.RestResp<io.github.discordchat.dto.resp.UserRegisterRespDto> io.github.discordchat.controller.front.UserController.register(io.github.discordchat.dto.req.UserRegisterReqDto)]
+2024-06-14 12:10:25,893 ERROR (CommonExceptionHandler.java:42)- Content-Type 'multipart/form-data;boundary=--------------------------225668103053490959839559;charset=UTF-8' is not supported
+org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'multipart/form-data;boundary=--------------------------225668103053490959839559;charset=UTF-8' is not supported
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodArgumentResolver.readWithMessageConverters(AbstractMessageConverterMethodArgumentResolver.java:213)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:161)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:135)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:224)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:178)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+2024-06-14 12:10:25,897 WARN (AbstractHandlerExceptionResolver.java:247)- Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'multipart/form-data;boundary=--------------------------225668103053490959839559;charset=UTF-8' is not supported]
+2024-06-14 12:11:04,612 ERROR (CommonExceptionHandler.java:42)- Content-Type 'multipart/form-data;boundary=--------------------------888871302443775941566863;charset=UTF-8' is not supported
+org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'multipart/form-data;boundary=--------------------------888871302443775941566863;charset=UTF-8' is not supported
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodArgumentResolver.readWithMessageConverters(AbstractMessageConverterMethodArgumentResolver.java:213)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:161)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:135)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:224)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:178)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+2024-06-14 12:11:04,613 WARN (AbstractHandlerExceptionResolver.java:247)- Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'multipart/form-data;boundary=--------------------------888871302443775941566863;charset=UTF-8' is not supported]
+2024-06-14 12:13:34,840 ERROR (CommonExceptionHandler.java:42)- Content-Type 'multipart/form-data;boundary=--------------------------752491445779778181172485;charset=UTF-8' is not supported
+org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'multipart/form-data;boundary=--------------------------752491445779778181172485;charset=UTF-8' is not supported
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodArgumentResolver.readWithMessageConverters(AbstractMessageConverterMethodArgumentResolver.java:213)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:161)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:135)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:224)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:178)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+2024-06-14 12:13:34,844 WARN (AbstractHandlerExceptionResolver.java:247)- Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'multipart/form-data;boundary=--------------------------752491445779778181172485;charset=UTF-8' is not supported]
+2024-06-14 12:15:28,551 DEBUG (BaseJdbcLogger.java:135)- ==>  Preparing: SELECT COUNT( * ) AS total FROM user_profile WHERE (username = ?) limit 1
+2024-06-14 12:15:28,573 DEBUG (BaseJdbcLogger.java:135)- ==> Parameters: lwq_test(String)
+2024-06-14 12:15:28,605 DEBUG (BaseJdbcLogger.java:135)- <==      Total: 1
+2024-06-14 12:15:28,610 DEBUG (BaseJdbcLogger.java:135)- ==>  Preparing: INSERT INTO user_profile ( username, password, create_time, update_time ) VALUES ( ?, ?, ?, ? )
+2024-06-14 12:15:28,615 DEBUG (BaseJdbcLogger.java:135)- ==> Parameters: lwq_test(String), 018bde06713746e72dbf382c8664c9a1(String), 2024-06-14T12:15:28.609361500(LocalDateTime), 2024-06-14T12:15:28.609361500(LocalDateTime)
+2024-06-14 12:15:28,626 DEBUG (BaseJdbcLogger.java:135)- <==    Updates: 1
+2024-06-14 12:39:27,709 DEBUG (BaseJdbcLogger.java:135)- ==>  Preparing: SELECT id,username,password,nick_name,user_sex,image_url,email,phone,create_time,update_time FROM user_profile WHERE (username = ?) limit 1
+2024-06-14 12:39:27,710 DEBUG (BaseJdbcLogger.java:135)- ==> Parameters: lwq_test(String)
+2024-06-14 12:39:27,715 DEBUG (BaseJdbcLogger.java:135)- <==      Total: 1
+2024-06-14 12:40:27,825 INFO (HikariDataSource.java:349)- HikariPool-1 - Shutdown initiated...
+2024-06-14 12:40:27,829 INFO (HikariDataSource.java:351)- HikariPool-1 - Shutdown completed.
+2024-06-14 19:48:18,564 INFO (Version.java:21)- HV000001: Hibernate Validator 8.0.1.Final
+2024-06-14 19:48:18,608 INFO (StartupInfoLogger.java:50)- Starting DiscordChatApplication using Java 21.0.1 with PID 3320 (C:\Users\lwq\IdeaProjects\discord-chat-backend\target\classes started by lwq in C:\Users\lwq\IdeaProjects\discord-chat-backend)
+2024-06-14 19:48:18,608 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-14 19:48:18,610 INFO (SpringApplication.java:660)- The following 1 profile is active: "dev"
+2024-06-14 19:48:18,671 INFO (DeferredLog.java:252)- Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-06-14 19:48:18,673 INFO (DeferredLog.java:252)- For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-06-14 19:48:19,978 INFO (RepositoryConfigurationDelegate.java:295)- Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-14 19:48:19,981 INFO (RepositoryConfigurationDelegate.java:143)- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-06-14 19:48:20,025 INFO (RepositoryConfigurationDelegate.java:211)- Finished Spring Data repository scanning in 21 ms. Found 0 Redis repository interfaces.
+2024-06-14 19:48:21,290 INFO (TomcatWebServer.java:111)- Tomcat initialized with port 8888 (http)
+2024-06-14 19:48:21,305 INFO (DirectJDKLog.java:173)- Initializing ProtocolHandler ["http-nio-8888"]
+2024-06-14 19:48:21,307 INFO (DirectJDKLog.java:173)- Starting service [Tomcat]
+2024-06-14 19:48:21,307 INFO (DirectJDKLog.java:173)- Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-14 19:48:21,371 INFO (DirectJDKLog.java:173)- Initializing Spring embedded WebApplicationContext
+2024-06-14 19:48:21,371 INFO (ServletWebServerApplicationContext.java:296)- Root WebApplicationContext: initialization completed in 2698 ms
+2024-06-14 19:48:21,684 INFO (Version.java:41)- Redisson 3.19.1
+2024-06-14 19:48:21,968 INFO (ConnectionPool.java:162)- 1 connections initialized for 127.0.0.1/127.0.0.1:6378
+2024-06-14 19:48:22,011 INFO (ConnectionPool.java:162)- 24 connections initialized for 127.0.0.1/127.0.0.1:6378
+2024-06-14 19:48:23,836 INFO (OptionalLiveReloadServer.java:59)- LiveReload server is running on port 35729
+2024-06-14 19:48:23,845 INFO (EndpointLinksResolver.java:60)- Exposing 1 endpoint beneath base path '/actuator'
+2024-06-14 19:48:23,909 INFO (DirectJDKLog.java:173)- Starting ProtocolHandler ["http-nio-8888"]
+2024-06-14 19:48:23,916 INFO (TomcatWebServer.java:243)- Tomcat started on port 8888 (http) with context path '/'
+2024-06-14 19:48:23,929 INFO (StartupInfoLogger.java:56)- Started DiscordChatApplication in 6.016 seconds (process running for 6.939)
+2024-06-14 19:48:24,120 INFO (DirectJDKLog.java:173)- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-14 19:48:24,120 INFO (FrameworkServlet.java:532)- Initializing Servlet 'dispatcherServlet'
+2024-06-14 19:48:24,122 INFO (HikariDataSource.java:109)- HikariPool-1 - Starting...
+2024-06-14 19:48:24,122 INFO (FrameworkServlet.java:554)- Completed initialization in 1 ms
+2024-06-14 19:48:24,386 INFO (HikariPool.java:554)- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@279ee007
+2024-06-14 19:48:24,391 INFO (HikariDataSource.java:122)- HikariPool-1 - Start completed.
+2024-06-14 19:50:35,419 INFO (HikariDataSource.java:349)- HikariPool-1 - Shutdown initiated...
+2024-06-14 19:50:35,430 INFO (HikariDataSource.java:351)- HikariPool-1 - Shutdown completed.
+2024-06-14 19:50:38,224 INFO (Version.java:21)- HV000001: Hibernate Validator 8.0.1.Final
+2024-06-14 19:50:38,260 INFO (StartupInfoLogger.java:50)- Starting DiscordChatApplication using Java 21.0.1 with PID 20156 (C:\Users\lwq\IdeaProjects\discord-chat-backend\target\classes started by lwq in C:\Users\lwq\IdeaProjects\discord-chat-backend)
+2024-06-14 19:50:38,260 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-14 19:50:38,261 INFO (SpringApplication.java:660)- The following 1 profile is active: "dev"
+2024-06-14 19:50:38,313 INFO (DeferredLog.java:252)- Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-06-14 19:50:38,313 INFO (DeferredLog.java:252)- For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-06-14 19:50:39,500 INFO (RepositoryConfigurationDelegate.java:295)- Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-14 19:50:39,502 INFO (RepositoryConfigurationDelegate.java:143)- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-06-14 19:50:39,534 INFO (RepositoryConfigurationDelegate.java:211)- Finished Spring Data repository scanning in 18 ms. Found 0 Redis repository interfaces.
+2024-06-14 19:50:40,539 INFO (TomcatWebServer.java:111)- Tomcat initialized with port 8888 (http)
+2024-06-14 19:50:40,550 INFO (DirectJDKLog.java:173)- Initializing ProtocolHandler ["http-nio-8888"]
+2024-06-14 19:50:40,551 INFO (DirectJDKLog.java:173)- Starting service [Tomcat]
+2024-06-14 19:50:40,552 INFO (DirectJDKLog.java:173)- Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-14 19:50:40,616 INFO (DirectJDKLog.java:173)- Initializing Spring embedded WebApplicationContext
+2024-06-14 19:50:40,616 INFO (ServletWebServerApplicationContext.java:296)- Root WebApplicationContext: initialization completed in 2302 ms
+2024-06-14 19:50:41,024 INFO (Version.java:41)- Redisson 3.19.1
+2024-06-14 19:50:41,320 INFO (ConnectionPool.java:162)- 1 connections initialized for 127.0.0.1/127.0.0.1:6378
+2024-06-14 19:50:41,368 INFO (ConnectionPool.java:162)- 24 connections initialized for 127.0.0.1/127.0.0.1:6378
+2024-06-14 19:50:43,102 INFO (OptionalLiveReloadServer.java:59)- LiveReload server is running on port 35729
+2024-06-14 19:50:43,113 INFO (EndpointLinksResolver.java:60)- Exposing 1 endpoint beneath base path '/actuator'
+2024-06-14 19:50:43,174 INFO (DirectJDKLog.java:173)- Starting ProtocolHandler ["http-nio-8888"]
+2024-06-14 19:50:43,188 INFO (TomcatWebServer.java:243)- Tomcat started on port 8888 (http) with context path '/'
+2024-06-14 19:50:43,201 INFO (StartupInfoLogger.java:56)- Started DiscordChatApplication in 5.608 seconds (process running for 6.432)
+2024-06-14 19:50:43,675 INFO (DirectJDKLog.java:173)- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-14 19:50:43,675 INFO (HikariDataSource.java:109)- HikariPool-1 - Starting...
+2024-06-14 19:50:43,676 INFO (FrameworkServlet.java:532)- Initializing Servlet 'dispatcherServlet'
+2024-06-14 19:50:43,679 INFO (FrameworkServlet.java:554)- Completed initialization in 2 ms
+2024-06-14 19:50:43,861 INFO (HikariPool.java:554)- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6dec3a53
+2024-06-14 19:50:43,865 INFO (HikariDataSource.java:122)- HikariPool-1 - Start completed.
+2024-06-14 19:51:26,856 ERROR (CommonExceptionHandler.java:42)- No static resource api/login.
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource api/login.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:52)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:309)
+2024-06-14 19:51:26,882 WARN (AbstractHandlerExceptionResolver.java:247)- Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource api/login.]
+2024-06-14 19:54:04,944 DEBUG (BaseJdbcLogger.java:135)- ==>  Preparing: SELECT id,username,password,nick_name,user_sex,image_url,email,phone,create_time,update_time FROM user_profile WHERE (username = ?) limit 1
+2024-06-14 19:54:04,971 DEBUG (BaseJdbcLogger.java:135)- ==> Parameters: lwq_test(String)
+2024-06-14 19:54:05,004 DEBUG (BaseJdbcLogger.java:135)- <==      Total: 1
+2024-06-14 19:56:04,251 DEBUG (BaseJdbcLogger.java:135)- ==>  Preparing: SELECT id,username,password,nick_name,user_sex,image_url,email,phone,create_time,update_time FROM user_profile WHERE (username = ?) limit 1
+2024-06-14 19:56:04,253 DEBUG (BaseJdbcLogger.java:135)- ==> Parameters: lwq_test(String)
+2024-06-14 19:56:04,256 DEBUG (BaseJdbcLogger.java:135)- <==      Total: 1
+2024-06-14 20:00:41,974 INFO (HikariDataSource.java:349)- HikariPool-1 - Shutdown initiated...
+2024-06-14 20:00:41,982 INFO (HikariDataSource.java:351)- HikariPool-1 - Shutdown completed.
+2024-06-14 20:01:19,049 INFO (Version.java:21)- HV000001: Hibernate Validator 8.0.1.Final
+2024-06-14 20:01:19,084 INFO (StartupInfoLogger.java:50)- Starting DiscordChatApplication using Java 21.0.1 with PID 19092 (C:\Users\lwq\IdeaProjects\discord-chat-backend\target\classes started by lwq in C:\Users\lwq\IdeaProjects\discord-chat-backend)
+2024-06-14 20:01:19,085 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-14 20:01:19,086 INFO (SpringApplication.java:660)- The following 1 profile is active: "dev"
+2024-06-14 20:01:19,146 INFO (DeferredLog.java:252)- Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-06-14 20:01:19,146 INFO (DeferredLog.java:252)- For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-06-14 20:01:20,478 INFO (RepositoryConfigurationDelegate.java:295)- Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-14 20:01:20,481 INFO (RepositoryConfigurationDelegate.java:143)- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-06-14 20:01:20,513 INFO (RepositoryConfigurationDelegate.java:211)- Finished Spring Data repository scanning in 17 ms. Found 0 Redis repository interfaces.
+2024-06-14 20:01:21,549 INFO (TomcatWebServer.java:111)- Tomcat initialized with port 8888 (http)
+2024-06-14 20:01:21,562 INFO (DirectJDKLog.java:173)- Initializing ProtocolHandler ["http-nio-8888"]
+2024-06-14 20:01:21,564 INFO (DirectJDKLog.java:173)- Starting service [Tomcat]
+2024-06-14 20:01:21,565 INFO (DirectJDKLog.java:173)- Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-14 20:01:21,617 INFO (DirectJDKLog.java:173)- Initializing Spring embedded WebApplicationContext
+2024-06-14 20:01:21,618 INFO (ServletWebServerApplicationContext.java:296)- Root WebApplicationContext: initialization completed in 2470 ms
+2024-06-14 20:01:21,933 INFO (Version.java:41)- Redisson 3.19.1
+2024-06-14 20:01:22,232 INFO (ConnectionPool.java:162)- 1 connections initialized for 127.0.0.1/127.0.0.1:6378
+2024-06-14 20:01:22,279 INFO (ConnectionPool.java:162)- 24 connections initialized for 127.0.0.1/127.0.0.1:6378
+2024-06-14 20:01:23,970 INFO (OptionalLiveReloadServer.java:59)- LiveReload server is running on port 35729
+2024-06-14 20:01:23,982 INFO (EndpointLinksResolver.java:60)- Exposing 1 endpoint beneath base path '/actuator'
+2024-06-14 20:01:24,052 INFO (DirectJDKLog.java:173)- Starting ProtocolHandler ["http-nio-8888"]
+2024-06-14 20:01:24,060 INFO (TomcatWebServer.java:243)- Tomcat started on port 8888 (http) with context path '/'
+2024-06-14 20:01:24,073 INFO (StartupInfoLogger.java:56)- Started DiscordChatApplication in 5.572 seconds (process running for 7.358)
+2024-06-14 20:01:29,053 INFO (DirectJDKLog.java:173)- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-14 20:01:29,054 INFO (FrameworkServlet.java:532)- Initializing Servlet 'dispatcherServlet'
+2024-06-14 20:01:29,057 INFO (FrameworkServlet.java:554)- Completed initialization in 2 ms
+2024-06-14 20:01:50,581 INFO (HikariDataSource.java:109)- HikariPool-1 - Starting...
+2024-06-14 20:01:51,243 INFO (HikariPool.java:554)- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@42aa9259
+2024-06-14 20:01:51,255 INFO (HikariDataSource.java:122)- HikariPool-1 - Start completed.
+2024-06-14 20:01:51,306 DEBUG (BaseJdbcLogger.java:135)- ==>  Preparing: SELECT id,username,password,nick_name,user_sex,image_url,email,phone,create_time,update_time FROM user_profile WHERE (username = ?) limit 1
+2024-06-14 20:01:51,497 DEBUG (BaseJdbcLogger.java:135)- ==> Parameters: lwq_test(String)
+2024-06-14 20:01:51,679 DEBUG (BaseJdbcLogger.java:135)- <==      Total: 1
+2024-06-14 20:03:20,292 WARN (HikariPool.java:797)- HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m28s925ms580µs500ns).
+2024-06-14 20:03:20,343 INFO (HikariDataSource.java:349)- HikariPool-1 - Shutdown initiated...
+2024-06-14 20:03:20,351 INFO (HikariDataSource.java:351)- HikariPool-1 - Shutdown completed.
+2024-06-14 20:03:26,948 INFO (Version.java:21)- HV000001: Hibernate Validator 8.0.1.Final
+2024-06-14 20:03:26,975 INFO (StartupInfoLogger.java:50)- Starting DiscordChatApplication using Java 21.0.1 with PID 21648 (C:\Users\lwq\IdeaProjects\discord-chat-backend\target\classes started by lwq in C:\Users\lwq\IdeaProjects\discord-chat-backend)
+2024-06-14 20:03:26,975 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-14 20:03:26,976 INFO (SpringApplication.java:660)- The following 1 profile is active: "dev"
+2024-06-14 20:03:27,024 INFO (DeferredLog.java:252)- Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-06-14 20:03:27,024 INFO (DeferredLog.java:252)- For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-06-14 20:03:28,015 INFO (RepositoryConfigurationDelegate.java:295)- Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-14 20:03:28,018 INFO (RepositoryConfigurationDelegate.java:143)- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-06-14 20:03:28,044 INFO (RepositoryConfigurationDelegate.java:211)- Finished Spring Data repository scanning in 15 ms. Found 0 Redis repository interfaces.
+2024-06-14 20:03:29,047 INFO (TomcatWebServer.java:111)- Tomcat initialized with port 8888 (http)
+2024-06-14 20:03:29,056 INFO (DirectJDKLog.java:173)- Initializing ProtocolHandler ["http-nio-8888"]
+2024-06-14 20:03:29,059 INFO (DirectJDKLog.java:173)- Starting service [Tomcat]
+2024-06-14 20:03:29,059 INFO (DirectJDKLog.java:173)- Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-14 20:03:29,119 INFO (DirectJDKLog.java:173)- Initializing Spring embedded WebApplicationContext
+2024-06-14 20:03:29,119 INFO (ServletWebServerApplicationContext.java:296)- Root WebApplicationContext: initialization completed in 2094 ms
+2024-06-14 20:03:29,488 INFO (Version.java:41)- Redisson 3.19.1
+2024-06-14 20:03:29,740 INFO (ConnectionPool.java:162)- 1 connections initialized for 127.0.0.1/127.0.0.1:6378
+2024-06-14 20:03:29,790 INFO (ConnectionPool.java:162)- 24 connections initialized for 127.0.0.1/127.0.0.1:6378
+2024-06-14 20:03:31,669 INFO (OptionalLiveReloadServer.java:59)- LiveReload server is running on port 35729
+2024-06-14 20:03:31,681 INFO (EndpointLinksResolver.java:60)- Exposing 1 endpoint beneath base path '/actuator'
+2024-06-14 20:03:31,753 INFO (DirectJDKLog.java:173)- Starting ProtocolHandler ["http-nio-8888"]
+2024-06-14 20:03:31,760 INFO (TomcatWebServer.java:243)- Tomcat started on port 8888 (http) with context path '/'
+2024-06-14 20:03:31,776 INFO (StartupInfoLogger.java:56)- Started DiscordChatApplication in 5.36 seconds (process running for 6.088)
+2024-06-14 20:03:32,005 INFO (DirectJDKLog.java:173)- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-14 20:03:32,006 INFO (FrameworkServlet.java:532)- Initializing Servlet 'dispatcherServlet'
+2024-06-14 20:03:32,006 INFO (HikariDataSource.java:109)- HikariPool-1 - Starting...
+2024-06-14 20:03:32,007 INFO (FrameworkServlet.java:554)- Completed initialization in 1 ms
+2024-06-14 20:03:32,185 INFO (HikariPool.java:554)- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7ceca5e8
+2024-06-14 20:03:32,189 INFO (HikariDataSource.java:122)- HikariPool-1 - Start completed.
+2024-06-14 20:04:56,127 DEBUG (BaseJdbcLogger.java:135)- ==>  Preparing: SELECT id,username,password,nick_name,user_sex,image_url,email,phone,create_time,update_time FROM user_profile WHERE (username = ?) limit 1
+2024-06-14 20:04:56,157 DEBUG (BaseJdbcLogger.java:135)- ==> Parameters: lwq_test(String)
+2024-06-14 20:04:56,195 DEBUG (BaseJdbcLogger.java:135)- <==      Total: 1
+2024-06-14 20:07:22,797 DEBUG (BaseJdbcLogger.java:135)- ==>  Preparing: SELECT id,username,password,nick_name,user_sex,image_url,email,phone,create_time,update_time FROM user_profile WHERE (username = ?) limit 1
+2024-06-14 20:07:22,798 DEBUG (BaseJdbcLogger.java:135)- ==> Parameters: lwq_test(String)
+2024-06-14 20:07:22,801 DEBUG (BaseJdbcLogger.java:135)- <==      Total: 1
+2024-06-14 20:07:31,235 DEBUG (BaseJdbcLogger.java:135)- ==>  Preparing: SELECT id,username,password,nick_name,user_sex,image_url,email,phone,create_time,update_time FROM user_profile WHERE (username = ?) limit 1
+2024-06-14 20:07:31,236 DEBUG (BaseJdbcLogger.java:135)- ==> Parameters: lwq_test(String)
+2024-06-14 20:07:31,238 DEBUG (BaseJdbcLogger.java:135)- <==      Total: 1
+2024-06-14 20:07:35,476 DEBUG (BaseJdbcLogger.java:135)- ==>  Preparing: SELECT id,username,password,nick_name,user_sex,image_url,email,phone,create_time,update_time FROM user_profile WHERE (username = ?) limit 1
+2024-06-14 20:07:35,477 DEBUG (BaseJdbcLogger.java:135)- ==> Parameters: lwq_test(String)
+2024-06-14 20:07:35,479 DEBUG (BaseJdbcLogger.java:135)- <==      Total: 1
+2024-06-14 20:07:36,238 DEBUG (BaseJdbcLogger.java:135)- ==>  Preparing: SELECT id,username,password,nick_name,user_sex,image_url,email,phone,create_time,update_time FROM user_profile WHERE (username = ?) limit 1
+2024-06-14 20:07:36,239 DEBUG (BaseJdbcLogger.java:135)- ==> Parameters: lwq_test(String)
+2024-06-14 20:07:36,241 DEBUG (BaseJdbcLogger.java:135)- <==      Total: 1
+2024-06-14 20:11:25,638 DEBUG (BaseJdbcLogger.java:135)- ==>  Preparing: SELECT id,username,password,nick_name,user_sex,image_url,email,phone,create_time,update_time FROM user_profile WHERE (username = ?) limit 1
+2024-06-14 20:11:25,640 DEBUG (BaseJdbcLogger.java:135)- ==> Parameters: lwq_test(String)
+2024-06-14 20:11:25,641 DEBUG (BaseJdbcLogger.java:135)- <==      Total: 1
+2024-06-14 20:14:13,361 DEBUG (BaseJdbcLogger.java:135)- ==>  Preparing: SELECT id,username,password,nick_name,user_sex,image_url,email,phone,create_time,update_time FROM user_profile WHERE (username = ?) limit 1
+2024-06-14 20:14:13,362 DEBUG (BaseJdbcLogger.java:135)- ==> Parameters: lwq_test(String)
+2024-06-14 20:14:13,363 DEBUG (BaseJdbcLogger.java:135)- <==      Total: 1
+2024-06-14 20:14:15,506 DEBUG (BaseJdbcLogger.java:135)- ==>  Preparing: SELECT id,username,password,nick_name,user_sex,image_url,email,phone,create_time,update_time FROM user_profile WHERE (username = ?) limit 1
+2024-06-14 20:14:15,507 DEBUG (BaseJdbcLogger.java:135)- ==> Parameters: lwq_test(String)
+2024-06-14 20:14:15,508 DEBUG (BaseJdbcLogger.java:135)- <==      Total: 1
+2024-06-14 20:14:16,190 DEBUG (BaseJdbcLogger.java:135)- ==>  Preparing: SELECT id,username,password,nick_name,user_sex,image_url,email,phone,create_time,update_time FROM user_profile WHERE (username = ?) limit 1
+2024-06-14 20:14:16,190 DEBUG (BaseJdbcLogger.java:135)- ==> Parameters: lwq_test(String)
+2024-06-14 20:14:16,192 DEBUG (BaseJdbcLogger.java:135)- <==      Total: 1
+2024-06-14 20:14:16,935 DEBUG (BaseJdbcLogger.java:135)- ==>  Preparing: SELECT id,username,password,nick_name,user_sex,image_url,email,phone,create_time,update_time FROM user_profile WHERE (username = ?) limit 1
+2024-06-14 20:14:16,936 DEBUG (BaseJdbcLogger.java:135)- ==> Parameters: lwq_test(String)
+2024-06-14 20:14:16,938 DEBUG (BaseJdbcLogger.java:135)- <==      Total: 1
+2024-06-14 20:16:05,452 DEBUG (BaseJdbcLogger.java:135)- ==>  Preparing: SELECT id,username,password,nick_name,user_sex,image_url,email,phone,create_time,update_time FROM user_profile WHERE (username = ?) limit 1
+2024-06-14 20:16:05,454 DEBUG (BaseJdbcLogger.java:135)- ==> Parameters: lwq6218(String)
+2024-06-14 20:16:05,455 DEBUG (BaseJdbcLogger.java:135)- <==      Total: 0
+2024-06-14 20:16:05,459 ERROR (CommonExceptionHandler.java:33)- 用户账号不存在
+io.github.discordchat.core.common.exception.BusinessException: 用户账号不存在
+2024-06-14 20:16:05,465 WARN (AbstractHandlerExceptionResolver.java:247)- Resolved [BusinessException(errorCodeEnum=USER_ACCOUNT_NOT_EXIST)]
+2024-06-14 20:17:56,991 DEBUG (BaseJdbcLogger.java:135)- ==>  Preparing: SELECT id,username,password,nick_name,user_sex,image_url,email,phone,create_time,update_time FROM user_profile WHERE (username = ?) limit 1
+2024-06-14 20:17:56,992 DEBUG (BaseJdbcLogger.java:135)- ==> Parameters: lwq_test(String)
+2024-06-14 20:17:56,994 DEBUG (BaseJdbcLogger.java:135)- <==      Total: 1
+2024-06-14 20:20:56,739 DEBUG (BaseJdbcLogger.java:135)- ==>  Preparing: SELECT id,username,password,nick_name,user_sex,image_url,email,phone,create_time,update_time FROM user_profile WHERE (username = ?) limit 1
+2024-06-14 20:20:56,741 DEBUG (BaseJdbcLogger.java:135)- ==> Parameters: lwq_test(String)
+2024-06-14 20:20:56,742 DEBUG (BaseJdbcLogger.java:135)- <==      Total: 1
+2024-06-14 20:22:13,546 DEBUG (BaseJdbcLogger.java:135)- ==>  Preparing: SELECT id,username,password,nick_name,user_sex,image_url,email,phone,create_time,update_time FROM user_profile WHERE (username = ?) limit 1
+2024-06-14 20:22:13,547 DEBUG (BaseJdbcLogger.java:135)- ==> Parameters: lwq_test(String)
+2024-06-14 20:22:13,548 DEBUG (BaseJdbcLogger.java:135)- <==      Total: 1
+2024-06-14 21:18:54,440 DEBUG (BaseJdbcLogger.java:135)- ==>  Preparing: SELECT id,username,password,nick_name,user_sex,image_url,email,phone,create_time,update_time FROM user_profile WHERE (username = ?) limit 1
+2024-06-14 21:18:54,443 DEBUG (BaseJdbcLogger.java:135)- ==> Parameters: lwq_test(String)
+2024-06-14 21:18:54,448 DEBUG (BaseJdbcLogger.java:135)- <==      Total: 1
+2024-06-14 21:18:54,450 ERROR (CommonExceptionHandler.java:33)- 用户密码错误
+io.github.discordchat.core.common.exception.BusinessException: 用户密码错误
+2024-06-14 21:18:54,452 WARN (AbstractHandlerExceptionResolver.java:247)- Resolved [BusinessException(errorCodeEnum=USER_PASSWORD_ERROR)]
+2024-06-14 21:20:11,420 DEBUG (BaseJdbcLogger.java:135)- ==>  Preparing: SELECT id,username,password,nick_name,user_sex,image_url,email,phone,create_time,update_time FROM user_profile WHERE (username = ?) limit 1
+2024-06-14 21:20:11,421 DEBUG (BaseJdbcLogger.java:135)- ==> Parameters: lwq_test(String)
+2024-06-14 21:20:11,422 DEBUG (BaseJdbcLogger.java:135)- <==      Total: 1
+2024-06-14 21:22:19,505 DEBUG (BaseJdbcLogger.java:135)- ==>  Preparing: SELECT id,username,password,nick_name,user_sex,image_url,email,phone,create_time,update_time FROM user_profile WHERE (username = ?) limit 1
+2024-06-14 21:22:19,506 DEBUG (BaseJdbcLogger.java:135)- ==> Parameters: lwq_test(String)
+2024-06-14 21:22:19,508 DEBUG (BaseJdbcLogger.java:135)- <==      Total: 1
+2024-06-14 21:22:19,508 ERROR (CommonExceptionHandler.java:33)- 用户密码错误
+io.github.discordchat.core.common.exception.BusinessException: 用户密码错误
+2024-06-14 21:22:19,510 WARN (AbstractHandlerExceptionResolver.java:247)- Resolved [BusinessException(errorCodeEnum=USER_PASSWORD_ERROR)]
+2024-06-14 21:37:32,042 INFO (HikariDataSource.java:349)- HikariPool-1 - Shutdown initiated...
+2024-06-14 21:37:32,047 INFO (HikariDataSource.java:351)- HikariPool-1 - Shutdown completed.
+2024-06-14 22:32:21,246 INFO (Version.java:21)- HV000001: Hibernate Validator 8.0.1.Final
+2024-06-14 22:32:21,293 INFO (StartupInfoLogger.java:50)- Starting DiscordChatApplication using Java 21.0.1 with PID 16032 (C:\Users\lwq\IdeaProjects\discord-chat-backend\target\classes started by lwq in C:\Users\lwq\IdeaProjects\discord-chat-backend)
+2024-06-14 22:32:21,294 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-14 22:32:21,295 INFO (SpringApplication.java:660)- The following 1 profile is active: "dev"
+2024-06-14 22:32:21,358 INFO (DeferredLog.java:252)- Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-06-14 22:32:21,359 INFO (DeferredLog.java:252)- For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-06-14 22:32:22,904 INFO (RepositoryConfigurationDelegate.java:295)- Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-14 22:32:22,909 INFO (RepositoryConfigurationDelegate.java:143)- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-06-14 22:32:22,947 INFO (RepositoryConfigurationDelegate.java:211)- Finished Spring Data repository scanning in 19 ms. Found 0 Redis repository interfaces.
+2024-06-14 22:32:24,205 INFO (TomcatWebServer.java:111)- Tomcat initialized with port 8888 (http)
+2024-06-14 22:32:24,218 INFO (DirectJDKLog.java:173)- Initializing ProtocolHandler ["http-nio-8888"]
+2024-06-14 22:32:24,220 INFO (DirectJDKLog.java:173)- Starting service [Tomcat]
+2024-06-14 22:32:24,220 INFO (DirectJDKLog.java:173)- Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-14 22:32:24,279 INFO (DirectJDKLog.java:173)- Initializing Spring embedded WebApplicationContext
+2024-06-14 22:32:24,280 INFO (ServletWebServerApplicationContext.java:296)- Root WebApplicationContext: initialization completed in 2920 ms
+2024-06-14 22:32:24,627 INFO (Version.java:41)- Redisson 3.19.1
+2024-06-14 22:32:24,955 INFO (ConnectionPool.java:162)- 1 connections initialized for 127.0.0.1/127.0.0.1:6378
+2024-06-14 22:32:25,002 INFO (ConnectionPool.java:162)- 24 connections initialized for 127.0.0.1/127.0.0.1:6378
+2024-06-14 22:32:27,009 INFO (OptionalLiveReloadServer.java:59)- LiveReload server is running on port 35729
+2024-06-14 22:32:27,019 INFO (EndpointLinksResolver.java:60)- Exposing 1 endpoint beneath base path '/actuator'
+2024-06-14 22:32:27,080 INFO (DirectJDKLog.java:173)- Starting ProtocolHandler ["http-nio-8888"]
+2024-06-14 22:32:27,087 INFO (TomcatWebServer.java:243)- Tomcat started on port 8888 (http) with context path '/'
+2024-06-14 22:32:27,100 INFO (StartupInfoLogger.java:56)- Started DiscordChatApplication in 6.536 seconds (process running for 7.549)
+2024-06-14 22:32:27,371 INFO (DirectJDKLog.java:173)- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-14 22:32:27,372 INFO (FrameworkServlet.java:532)- Initializing Servlet 'dispatcherServlet'
+2024-06-14 22:32:27,372 INFO (HikariDataSource.java:109)- HikariPool-1 - Starting...
+2024-06-14 22:32:27,373 INFO (FrameworkServlet.java:554)- Completed initialization in 1 ms
+2024-06-14 22:32:27,528 INFO (HikariPool.java:554)- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@76616a54
+2024-06-14 22:32:27,538 INFO (HikariDataSource.java:122)- HikariPool-1 - Start completed.
+2024-06-14 22:37:47,952 INFO (HikariDataSource.java:349)- HikariPool-1 - Shutdown initiated...
+2024-06-14 22:37:47,964 INFO (HikariDataSource.java:351)- HikariPool-1 - Shutdown completed.
+2024-06-14 22:37:50,624 INFO (Version.java:21)- HV000001: Hibernate Validator 8.0.1.Final
+2024-06-14 22:37:50,652 INFO (StartupInfoLogger.java:50)- Starting DiscordChatApplication using Java 21.0.1 with PID 12888 (C:\Users\lwq\IdeaProjects\discord-chat-backend\target\classes started by lwq in C:\Users\lwq\IdeaProjects\discord-chat-backend)
+2024-06-14 22:37:50,652 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-06-14 22:37:50,653 INFO (SpringApplication.java:660)- The following 1 profile is active: "dev"
+2024-06-14 22:37:50,699 INFO (DeferredLog.java:252)- Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-06-14 22:37:50,700 INFO (DeferredLog.java:252)- For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-06-14 22:37:51,951 INFO (RepositoryConfigurationDelegate.java:295)- Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-14 22:37:51,954 INFO (RepositoryConfigurationDelegate.java:143)- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-06-14 22:37:51,988 INFO (RepositoryConfigurationDelegate.java:211)- Finished Spring Data repository scanning in 21 ms. Found 0 Redis repository interfaces.
+2024-06-14 22:37:53,178 INFO (TomcatWebServer.java:111)- Tomcat initialized with port 8888 (http)
+2024-06-14 22:37:53,193 INFO (DirectJDKLog.java:173)- Initializing ProtocolHandler ["http-nio-8888"]
+2024-06-14 22:37:53,195 INFO (DirectJDKLog.java:173)- Starting service [Tomcat]
+2024-06-14 22:37:53,196 INFO (DirectJDKLog.java:173)- Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-14 22:37:53,248 INFO (DirectJDKLog.java:173)- Initializing Spring embedded WebApplicationContext
+2024-06-14 22:37:53,248 INFO (ServletWebServerApplicationContext.java:296)- Root WebApplicationContext: initialization completed in 2548 ms
+2024-06-14 22:37:53,605 INFO (Version.java:41)- Redisson 3.19.1
+2024-06-14 22:37:53,904 INFO (ConnectionPool.java:162)- 1 connections initialized for 127.0.0.1/127.0.0.1:6378
+2024-06-14 22:37:53,960 INFO (ConnectionPool.java:162)- 24 connections initialized for 127.0.0.1/127.0.0.1:6378
+2024-06-14 22:37:55,585 INFO (OptionalLiveReloadServer.java:59)- LiveReload server is running on port 35729
+2024-06-14 22:37:55,594 INFO (EndpointLinksResolver.java:60)- Exposing 1 endpoint beneath base path '/actuator'
+2024-06-14 22:37:55,653 INFO (DirectJDKLog.java:173)- Starting ProtocolHandler ["http-nio-8888"]
+2024-06-14 22:37:55,658 INFO (TomcatWebServer.java:243)- Tomcat started on port 8888 (http) with context path '/'
+2024-06-14 22:37:55,670 INFO (StartupInfoLogger.java:56)- Started DiscordChatApplication in 5.561 seconds (process running for 6.363)
+2024-06-14 22:37:56,151 INFO (DirectJDKLog.java:173)- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-14 22:37:56,151 INFO (FrameworkServlet.java:532)- Initializing Servlet 'dispatcherServlet'
+2024-06-14 22:37:56,153 INFO (HikariDataSource.java:109)- HikariPool-1 - Starting...
+2024-06-14 22:37:56,154 INFO (FrameworkServlet.java:554)- Completed initialization in 2 ms
+2024-06-14 22:37:56,328 INFO (HikariPool.java:554)- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@27e50368
+2024-06-14 22:37:56,332 INFO (HikariDataSource.java:122)- HikariPool-1 - Start completed.
+2024-06-14 22:38:09,682 DEBUG (BaseJdbcLogger.java:135)- ==>  Preparing: SELECT id,username,password,nick_name,user_sex,image_url,email,phone,create_time,update_time FROM user_profile WHERE (username = ?) limit 1
+2024-06-14 22:38:09,707 DEBUG (BaseJdbcLogger.java:135)- ==> Parameters: lwq_test(String)
+2024-06-14 22:38:09,742 DEBUG (BaseJdbcLogger.java:135)- <==      Total: 1
+2024-06-14 22:43:19,322 INFO (HikariDataSource.java:349)- HikariPool-1 - Shutdown initiated...
+2024-06-14 22:43:19,331 INFO (HikariDataSource.java:351)- HikariPool-1 - Shutdown completed.
