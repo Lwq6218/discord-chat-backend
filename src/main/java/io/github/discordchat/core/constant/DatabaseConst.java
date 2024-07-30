@@ -267,7 +267,7 @@ public class DatabaseConst {
         CREATE_TIME("create_time"),
         UPDATE_TIME("update_time");
 
-        private String name;
+        private final String name;
 
         CommonColumnEnum(String name) {
             this.name = name;
@@ -288,7 +288,7 @@ public class DatabaseConst {
         LIMIT_30("limit 30"),
         LIMIT_500("limit 500");
 
-        private String sql;
+        private final String sql;
 
         SqlEnum(String sql) {
             this.sql = sql;

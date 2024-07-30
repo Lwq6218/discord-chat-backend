@@ -359,26 +359,25 @@ public class QuestionServiceImpl implements QuestionService {
         if (!Objects.equals(question.getProfileId(), userId)) {
             throw new BusinessException(ErrorCodeEnum.SYSTEM_ERROR);
         }
-        //删除问题
-        questionMapper.deleteById(id);
-        //删除问题-标签表
+
         QueryWrapper<QuestionTag> questionTagQueryWrapper = new QueryWrapper<>();
         questionTagQueryWrapper.eq(DatabaseConst.QuestionTagTable.COLUMN_QUESTION_ID, id);
-        questionTagMapper.delete(questionTagQueryWrapper);
         //更新标签的问题数
-        QueryWrapper<QuestionTag> questionTagQueryWrapper1 = new QueryWrapper<>();
-        questionTagQueryWrapper1.eq(DatabaseConst.QuestionTagTable.COLUMN_QUESTION_ID, id);
-        List<Long> tagIds = questionTagMapper.selectList(questionTagQueryWrapper1)
+        List<Long> tagIds = questionTagMapper.selectList(questionTagQueryWrapper)
                 .stream().map(QuestionTag::getTagId).toList();
         tagIds.forEach(tagId -> {
             Tag tag = tagMapper.selectById(tagId);
             tag.setQuestionCount(tag.getQuestionCount() - 1);
             tagMapper.updateById(tag);
         });
+        //删除问题-标签表
+        questionTagMapper.delete(questionTagQueryWrapper);
         //删除问题的回答
         QueryWrapper<Answer> answerQueryWrapper = new QueryWrapper<>();
         answerQueryWrapper.eq(DatabaseConst.AnswerTable.COLUMN_QUESTION_ID, id);
         answerMapper.delete(answerQueryWrapper);
+        //删除问题
+        questionMapper.deleteById(id);
         return RestResp.ok();
     }
 }

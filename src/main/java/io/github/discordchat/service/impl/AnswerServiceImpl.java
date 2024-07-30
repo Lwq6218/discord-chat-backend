@@ -126,6 +126,7 @@ public class AnswerServiceImpl implements AnswerService {
     }
 
     @Override
+    @Transactional(rollbackFor = Exception.class)
     public RestResp<Void> deleteAnswer(Long userId, Long id) {
         Answer answer = answerMapper.selectById(id);
         if (Objects.isNull(answer)) {
@@ -134,6 +135,11 @@ public class AnswerServiceImpl implements AnswerService {
         if (!answer.getProfileId().equals(userId)) {
             throw new BusinessException(ErrorCodeEnum.SYSTEM_ERROR);
         }
+        //问题答复数减一
+        Question question = questionMapper.selectById(answer.getQuestionId());
+        question.setAnswerCount(question.getAnswerCount() - 1);
+        questionMapper.updateById(question);
+        //删除答复
         answerMapper.deleteById(id);
 
         return RestResp.ok();

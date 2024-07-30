@@ -18,13 +18,13 @@ public class RestResp<T> {
      * 响应码
      */
     @Schema(description = "错误码，00000-没有错误")
-    private String code;
+    private final String code;
 
     /**
      * 响应消息
      */
     @Schema(description = "响应消息")
-    private String message;
+    private final String message;
 
     /**
      * 响应数据

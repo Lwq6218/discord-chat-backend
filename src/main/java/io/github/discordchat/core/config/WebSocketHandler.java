@@ -5,6 +5,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import org.jetbrains.annotations.NotNull;
+import org.jsoup.internal.FieldsAreNonnullByDefault;
 import org.springframework.stereotype.Component;
 import org.springframework.web.socket.CloseStatus;
 import org.springframework.web.socket.TextMessage;
@@ -14,6 +15,9 @@ import org.springframework.web.socket.handler.TextWebSocketHandler;
 import java.io.IOException;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @classname WebSocketHandler
@@ -26,7 +30,7 @@ import java.util.concurrent.ConcurrentHashMap;
 public class WebSocketHandler extends TextWebSocketHandler {
 
     private final Map<String, WebSocketSession> sessions = new ConcurrentHashMap<>();
-
+     private final ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
     private final ObjectMapper objectMapper ;
     private WebSocketHandler(ObjectMapper objectMapper) {
         this.objectMapper = objectMapper.copy();
@@ -37,6 +41,7 @@ public class WebSocketHandler extends TextWebSocketHandler {
     @Override
     public void afterConnectionEstablished(@NotNull WebSocketSession session) throws Exception {
         sessions.put(session.getId(), session);
+        startHeartBeat(session);
     }
 
     @Override
@@ -44,7 +49,7 @@ public class WebSocketHandler extends TextWebSocketHandler {
         sessions.remove(session.getId());
     }
     @Override
-    public void handleTransportError(WebSocketSession session, Throwable exception) throws Exception {
+    public void handleTransportError(@NotNull WebSocketSession session, Throwable exception) throws Exception {
         exception.printStackTrace();
     }
     public void broadcastToChannel(String key, Object message) throws IOException {
@@ -78,5 +83,18 @@ public class WebSocketHandler extends TextWebSocketHandler {
         public void setMessage(Object message) {
             this.message = message;
         }
+    }
+     private void startHeartBeat(WebSocketSession session) {
+        scheduler.scheduleAtFixedRate(() -> {
+            try {
+                if (session.isOpen()) {
+                    session.sendMessage(new TextMessage("{\"type\":\"PING\"}"));
+                } else {
+                    scheduler.shutdown();
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }, 30, 30, TimeUnit.SECONDS); // Send a heartbeat every 30 seconds
     }
 }
